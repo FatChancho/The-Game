@@ -65,7 +65,10 @@ function updateObstacles() {
   const player = new Component(30, 30, 'red', 0, 110);
   myGameArea.start();
 
-
+  myGameArea.canvas.addEventListener("mousemove", (e)=>{
+    player.x = e.clientX
+    player.y = e.clientY
+})
 
   document.addEventListener('keydown',(event)=>{
       switch(event.key){
